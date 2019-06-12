@@ -4,7 +4,7 @@ var wrongAnswersCount = 0;
 function myCountDown() {
     if (time > 0) {
         time--
-        $("#countdown").html(time);
+        $("#countdown").html("Time left: " + time);
     }
     else {
         clearTimeout(setInterval(myCountDown, 1000));
