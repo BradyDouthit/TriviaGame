@@ -8,12 +8,14 @@ function myCountDown() {
     }
     else {
         clearTimeout(setInterval(myCountDown, 1000));
-        $("#countdown").html("You took too long!");
+        $(".QandA").hide();
+        $(".snoozed").show();
     }
 }
 $("#start-button").on("click", function() {
     setInterval(myCountDown, 1000);
     $("#start-button").hide();
     $(".hidden").show();
+    $(".snoozed").hide();
 });
 
