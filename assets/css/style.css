@@ -1,7 +1,53 @@
 html {
     text-align: center;
     background-image: url("../images/Skyrim-trivia.jpg");
+    font-family: 'Economica', sans-serif;
 }
 h1 {
-    color: blue;
+    color: red;
+    font-size: 60px
+}
+.container {
+    width: 960px;
+    height: 500px;
+    background-color: gray;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 7.5%;
+}
+.hidden {
+    display: none;
+}
+#start-button {
+    font-size: 30px;
+    background-color: gray;
+    border: none;
+    margin-top: 17%;
+}
+#countdown {
+    font-size: 25px;
+}
+.questions {
+    font-size: 30px;
+}
+.wrong-answer {
+    font-size: 30px;
+    background-color: gray;
+    border: none;
+}
+.wrong-answer:hover {
+    background-color: darkgray;
+}
+.right-answer {
+    font-size: 30px;
+    background-color: gray;
+    border: none;
+}
+.right-answer:hover {
+    background-color: darkgray;
+}
+.answers {
+    text-align: left;
+    margin-left: 45%;
+    margin-right: 45%;
 }

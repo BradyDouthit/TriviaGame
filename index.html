@@ -3,11 +3,30 @@
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Economica&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
+<div class="container">
 
-    <h1>Trivia Game!</h1>
-    <p id="test">30</p>
+    <h1>Skyrim trivia!</h1>
 
+    <p class="hidden" id="countdown">30</p>
+
+    <div class="hidden QandA">
+        <p class="questions">How many daedric artifacts are there in total?</p>
+        <div class="answers">
+            <button class="wrong-answer">A. 14</button>
+            <br>
+            <button class="wrong-answer">B. 12</button>
+            <br>
+            <button class="wrong-answer">C. 22</button>
+            <br>
+            <button class="right-answer">D. 16</button>
+        </div>
+    </div>
+
+    <button id="start-button">Start</button>
+
+</div>
     <script src="assets/javascript/app.js"></script>
 </html>

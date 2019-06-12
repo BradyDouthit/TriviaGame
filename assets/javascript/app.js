@@ -1,12 +1,19 @@
 var time = 30;
-var seconds = setInterval(myCountDown, 100);
+var rightAnswersCount = 0;
+var wrongAnswersCount = 0;
 function myCountDown() {
     if (time > 0) {
         time--
-        $("#test").html(time);
+        $("#countdown").html(time);
     }
     else {
-        clearTimeout(seconds);
-        $("#test").html("You took too long!");
+        clearTimeout(setInterval(myCountDown, 1000));
+        $("#countdown").html("You took too long!");
     }
 }
+$("#start-button").on("click", function() {
+    setInterval(myCountDown, 1000);
+    $("#start-button").hide();
+    $(".hidden").show();
+});
+
