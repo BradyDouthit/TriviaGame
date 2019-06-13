@@ -46,7 +46,6 @@ function stopCount() {
         $(".wins").html("Questions answered right: " + wins);
      }
  };
- winCount();
  //adds up losses
  function lossCount() {
      if (losses < 5) {
@@ -54,23 +53,32 @@ function stopCount() {
         $(".losses").html("Questions answered wrong: " + losses);
      }
  };
- lossCount();
+ //adds up unanswered questions
+ function unansweredCount() {
+     if (time === 0) {
+         unanswered++
+         $(".unanswered").html("Questions left unanswered: " + unanswered);
+     }
+ }
  //Start button events(shows the first question and starts the timer)
 $("#start-button").on("click", function() {
-    count = setInterval(myCountDown, 1000);
+    count = setInterval(myCountDown, 100);
     time = 30;    
     $("#start-button").hide();
     $(".hidden").show();
     $(".snoozed").hide();
+    $(".wins").hide();
+    $(".losses").hide();
 });
 
 
-//2nd question right and wrong answer events
+//1st question right and wrong answer events
 $(".right-answer").on("click", function() {
     $(".QandA").hide();
     $(".hidden-message-right").show();
     setTimeout(secondQuestion, 3000);
     stopCount();
+    winCount();
 });
 $(".wrong-answer").on("click", function() {
     $(".QandA").hide();
@@ -79,15 +87,17 @@ $(".wrong-answer").on("click", function() {
     $(".hidden-message-wrong").show();
     setTimeout(secondQuestion, 3000);
     stopCount();
+    lossCount();
 });
 
 
-//3rd question right and wrong answer events
+//2nd question right and wrong answer events
 $(".right-answer2").on("click", function() {
     $(".QandA").hide();
     $(".hidden-message-right").show();
     setTimeout(thirdQuestion, 3000);
     stopCount();
+    winCount();
 });
 $(".wrong-answer2").on("click", function() {
     $(".QandA").hide();
@@ -95,15 +105,17 @@ $(".wrong-answer2").on("click", function() {
     $(".hidden-message-wrong").show();
     setTimeout(thirdQuestion, 3000);
     stopCount();
+    lossCount();
 });
 
 
-//4th question right and wrong answer events will go here
+//3rd question right and wrong answer events will go here
 $(".right-answer3").on("click", function() {
     $(".QandA").hide();
     $(".hidden-message-right").show();
     setTimeout(thirdQuestion, 3000);
     stopCount();
+    winCount();
 });
 $(".wrong-answer3").on("click", function() {
     $(".QandA").hide();
@@ -111,5 +123,32 @@ $(".wrong-answer3").on("click", function() {
     $(".hidden-message-wrong").show();
     setTimeout(thirdQuestion, 3000);
     stopCount();
+    lossCount();
 });
 
+
+
+
+
+
+//last question events
+$(".right-answer??").on("click", function() {
+    $(".QandA").hide();
+    stopCount();
+    winCount();
+    $(".wins").show();
+    $(".losses").show();
+    setTimeout(unansweredCount, 3000);
+});
+$(".wrong-answer??").on("click", function() {
+    $(".QandA").hide();
+    $(".if-wrong").html("The correct answer was:" + " C. Miraak's Sword");
+    stopCount();
+    lossCount();
+    $(".wins").show();
+    $(".losses").show();
+    setTimeout(unansweredCount, 3000);
+});
+//REMEMBER TO PUT THESE IN FOR THE LAST QUESTION
+//$(".wins").show();
+//$(".losses").show();
