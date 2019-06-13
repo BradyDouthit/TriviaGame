@@ -39,16 +39,22 @@ function thirdQuestion () {
 function stopCount() {
     clearInterval(count)
 }
-//adds up wins and losses
- function winLoss() {
-     if (wins === 5) {
-        $(".wins").html(wins);
-        $(".losses").show();
-     }
-     else {
-         wins++
+//adds up wins
+ function winCount() {
+     if (wins < 5) {
+        wins++
+        $(".wins").html("Questions answered right: " + wins);
      }
  };
+ winCount();
+ //adds up losses
+ function lossCount() {
+     if (losses < 5) {
+        losses++
+        $(".losses").html("Questions answered wrong: " + losses);
+     }
+ };
+ lossCount();
  //Start button events(shows the first question and starts the timer)
 $("#start-button").on("click", function() {
     count = setInterval(myCountDown, 1000);

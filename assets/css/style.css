@@ -123,3 +123,10 @@ h1 {
     margin-bottom: 1%;
     display: none;
 }
+.win-loss {
+    font-size: 50px;
+    
+}
+.losses {
+    margin-top: 3%;
+}
