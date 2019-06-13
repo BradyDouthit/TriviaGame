@@ -62,7 +62,7 @@ function stopCount() {
  }
  //Start button events(shows the first question and starts the timer)
 $("#start-button").on("click", function() {
-    count = setInterval(myCountDown, 100);
+    count = setInterval(myCountDown, 1000);
     time = 30;    
     $("#start-button").hide();
     $(".hidden").show();
@@ -138,7 +138,7 @@ $(".right-answer??").on("click", function() {
     winCount();
     $(".wins").show();
     $(".losses").show();
-    setTimeout(unansweredCount, 3000);
+    setTimeout(unansweredCount, 30000);
 });
 $(".wrong-answer??").on("click", function() {
     $(".QandA").hide();
@@ -147,7 +147,7 @@ $(".wrong-answer??").on("click", function() {
     lossCount();
     $(".wins").show();
     $(".losses").show();
-    setTimeout(unansweredCount, 3000);
+    setTimeout(unansweredCount, 30000);
 });
 //REMEMBER TO PUT THESE IN FOR THE LAST QUESTION
 //$(".wins").show();
