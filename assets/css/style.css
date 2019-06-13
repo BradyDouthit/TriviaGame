@@ -9,7 +9,7 @@ h1 {
 }
 .container {
     width: 960px;
-    height: 500px;
+    height: 525px;
     background-color: gray;
     margin-right: auto;
     margin-left: auto;
@@ -116,4 +116,10 @@ h1 {
     font-size: 50px;
     margin-top: 2%;
     margin-bottom: 3%;
+}
+.if-wrong {
+    font-size: 50px;
+    margin-top: -1%;
+    margin-bottom: 1%;
+    display: none;
 }

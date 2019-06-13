@@ -15,15 +15,18 @@
     
     <!--shows when the countdown reaches 0 without any user input-->
     <div class="hidden snoozed">You took too long!</div>
-    
+    <!--displays wins and losses-->
+    <div class="wins"></div>
+    <div class="losses"></div>
     <!--shows when an answer is correct-->
     <div class="hidden-message-right congrats">Congratulations! You know your skyrim stuff!</div>
     <img class="hidden-message-right" src="assets/images/right-guess.gif">
     <!--shows when an answer is incorrect-->
     <div class="hidden-message-wrong fail">Fail! Looks like you need to explore some more dungeons!</div>
+    <div class="hidden-message-wrong if-wrong"></div>
     <img class="hidden-message-wrong" src="assets/images/wrong-guess.gif">
     <!--shows a question with the list of possible answers, after start is clicked-->
-    <div class="hidden QandA">
+    <div class="hidden-question hidden QandA">
         <p class="questions">How many daedric artifacts are there in total?</p>
         <div class="answers">
             <button class="wrong-answer">A. 14</button>
