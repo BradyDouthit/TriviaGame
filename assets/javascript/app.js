@@ -46,6 +46,16 @@ function fourthQuestion () {
     clearTimeout(thirdQuestion);
     count = setInterval(myCountDown, 1000);
 };
+//resets the timer and shows the respective question when called
+function fifthQuestion () {
+    time = 30;
+    $(".hidden-message-right").hide();
+    $(".hidden-message-wrong").hide();
+    $(".hidden-question5").show();
+    clearTimeout(fourthQuestion);
+    count = setInterval(myCountDown, 1000);
+    console.log("test");
+};
 
 
 
@@ -156,7 +166,7 @@ $(".wrong-answer3").on("click", function() {
 $(".right-answer4").on("click", function() {
     $(".QandA").hide();
     $(".hidden-message-right").show();
-    setTimeout(fourthQuestion, 3000);
+    setTimeout(fifthQuestion, 3000);
     stopCount();
     winCount();
 });
@@ -164,7 +174,7 @@ $(".wrong-answer4").on("click", function() {
     $(".QandA").hide();
     $(".if-wrong").html("The correct answer was:" + " A. Mehrune's Razor");
     $(".hidden-message-wrong").show();
-    setTimeout(fourthQuestion, 3000);
+    setTimeout(fifthQuestion, 3000);
     stopCount();
     lossCount();
 });
@@ -172,7 +182,7 @@ $(".wrong-answer4").on("click", function() {
 
 
 //last question events
-/* $(".right-answer??").on("click", function() {
+$(".right-answer5").on("click", function() {
     $(".QandA").hide();
     stopCount();
     winCount();
@@ -180,7 +190,7 @@ $(".wrong-answer4").on("click", function() {
     $(".losses").show();
     setTimeout(unansweredCount, 30000);
 });
-$(".wrong-answer??").on("click", function() {
+$(".wrong-answer5").on("click", function() {
     $(".QandA").hide();
     $(".if-wrong").html("The correct answer was:" + " C. Miraak's Sword");
     stopCount();
@@ -192,4 +202,4 @@ $(".wrong-answer??").on("click", function() {
 //REMEMBER TO PUT THESE IN FOR THE LAST QUESTION
 //$(".wins").show();
 //$(".losses").show();
-*/
+

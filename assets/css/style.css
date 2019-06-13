@@ -36,6 +36,9 @@ h1 {
 .hidden-question4 {
     display: none;
 }
+.hidden-question5 {
+    display: none;
+}
 #start-button {
     font-size: 30px;
     background-color: gray;
@@ -112,6 +115,22 @@ h1 {
 .right-answer4:hover {
     background-color: darkgray;
 }
+.wrong-answer5 {
+    font-size: 30px;
+    background-color: gray;
+    border: none;
+}
+.wrong-answer5:hover {
+    background-color: darkgray;
+}
+.right-answer5 {
+    font-size: 30px;
+    background-color: gray;
+    border: none;
+}
+.right-answer5:hover {
+    background-color: darkgray;
+}
 .answers {
     text-align: left;
     margin-left: 45.5%;
@@ -126,6 +145,10 @@ h1 {
     margin-left: 41%;
 }
 .answers4 {
+    text-align: left;
+    margin-left: 40%;
+}
+.answers5 {
     text-align: left;
     margin-left: 40%;
 }
