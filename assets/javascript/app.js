@@ -45,7 +45,6 @@ function fourthQuestion () {
     $(".hidden-question4").show();
     clearTimeout(thirdQuestion);
     count = setInterval(myCountDown, 1000);
-    console.log("fuck")
 };
 
 

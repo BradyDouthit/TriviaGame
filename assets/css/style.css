@@ -3,6 +3,9 @@ html {
     background-image: url("../images/Skyrim-trivia.jpg");
     font-family: 'Economica', sans-serif;
 }
+button {
+    font-family: 'Economica', sans-serif;
+}
 h1 {
     color: red;
     font-size: 60px
@@ -120,11 +123,11 @@ h1 {
 }
 .answers3 {
     text-align: left;
-    margin-left: 33%;
+    margin-left: 41%;
 }
 .answers4 {
     text-align: left;
-    margin-left: 33%;
+    margin-left: 40%;
 }
 .snoozed {
     font-size: 50px;
