@@ -25,10 +25,13 @@ h1 {
     display: none;
 }
 .hidden-question2 {
-    display: none
+    display: none;
 }
 .hidden-question3 {
-    display: none
+    display: none;
+}
+.hidden-question4 {
+    display: none;
 }
 #start-button {
     font-size: 30px;
@@ -90,6 +93,22 @@ h1 {
 .right-answer3:hover {
     background-color: darkgray;
 }
+.wrong-answer4 {
+    font-size: 30px;
+    background-color: gray;
+    border: none;
+}
+.wrong-answer4:hover {
+    background-color: darkgray;
+}
+.right-answer4 {
+    font-size: 30px;
+    background-color: gray;
+    border: none;
+}
+.right-answer4:hover {
+    background-color: darkgray;
+}
 .answers {
     text-align: left;
     margin-left: 45.5%;
@@ -100,6 +119,10 @@ h1 {
     margin-right: 40.5%;
 }
 .answers3 {
+    text-align: left;
+    margin-left: 33%;
+}
+.answers4 {
     text-align: left;
     margin-left: 33%;
 }
