@@ -9,9 +9,20 @@
 <div class="container">
 
     <h1>The Elder Scrolls V: Skyrim trivia!</h1>
-
+    <!--shows the time left-->
     <p class="hidden" id="countdown">Time left: 30</p>
+
+    
+    <!--shows when the countdown reaches 0 without any user input-->
     <div class="hidden snoozed">You took too long!</div>
+    
+    <!--shows when an answer is correct-->
+    <div class="hidden-message-right congrats">Congratulations! You know your skyrim stuff!</div>
+    <img class="hidden-message-right" src="assets/images/right-guess.gif">
+    <!--shows when an answer is incorrect-->
+    <div class="hidden-message-wrong fail">Fail! Looks like you need to explore some more dungeons!</div>
+    <img class="hidden-message-wrong" src="assets/images/wrong-guess.gif">
+    <!--shows a question with the list of possible answers, after start is clicked-->
     <div class="hidden QandA">
         <p class="questions">How many daedric artifacts are there in total?</p>
         <div class="answers">
@@ -22,6 +33,30 @@
             <button class="wrong-answer">C. 22</button>
             <br>
             <button class="right-answer">D. 16</button>
+        </div>
+    </div>
+    <div class="hidden-question2 QandA">
+        <p class="questions">How many septims does it cost to buy a house in whiterun?</p>
+        <div class="answers2">
+            <button class="wrong-answer2">A. 20000</button>
+            <br>
+            <button class="right-answer2">B. 5000</button>
+            <br>
+            <button class="wrong-answer2">C. 1000</button>
+            <br>
+            <button class="wrong-answer2">D. 500</button>
+        </div>
+    </div>
+    <div class="hidden-question3 QandA">
+        <p class="questions">What is the highest damage sword in the game?</p>
+        <div class="answers3">
+            <button class="wrong-answer3">A. Chillrend</button>
+            <br>
+            <button class="wrong-answer3">B. A Daedric Sword</button>
+            <br>
+            <button class="right-answer3">C. Miraak's Sword</button>
+            <br>
+            <button class="wrong-answer3">D. A Dragonbone Sword</button>
         </div>
     </div>
 
