@@ -102,8 +102,7 @@ $("#start-button").on("click", function() {
     $("#start-button").hide();
     $(".hidden").show();
     $(".snoozed").hide();
-    $(".wins").hide();
-    $(".losses").hide();
+    $(".win-loss").hide();
 });
 
 
