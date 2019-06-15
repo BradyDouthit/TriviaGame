@@ -186,9 +186,7 @@ $(".right-answer5").on("click", function() {
     $(".QandA").hide();
     stopCount();
     winCount();
-    $(".wins").show();
-    $(".losses").show();
-    $(".unanswered").show();
+    $(".win-loss").show();
     setTimeout(unansweredCount, 30000);
 });
 $(".wrong-answer5").on("click", function() {
@@ -196,9 +194,7 @@ $(".wrong-answer5").on("click", function() {
     $(".if-wrong").html("The correct answer was:" + " C. Miraak's Sword");
     stopCount();
     lossCount();
-    $(".wins").show();
-    $(".losses").show();
-    $(".unanswered").show();
+    $(".win-loss").show();
     setTimeout(unansweredCount, 30000);
 });
 //REMEMBER TO PUT THESE IN FOR THE LAST QUESTION
