@@ -56,7 +56,12 @@ function fifthQuestion () {
     count = setInterval(myCountDown, 1000);
     console.log("test");
 };
-
+function lastQuestion () {
+    $(".hidden-message-right").hide();
+    $(".hidden-message-wrong").hide();
+    $(".win-loss").show();
+    clearTimeout(fifthQuestion);
+}
 
 
 
@@ -87,6 +92,7 @@ function stopCount() {
  //adds up unanswered questions
  function unansweredCount() {
      if (time === 0) {
+         console.log(time);
          unanswered++
          $(".unanswered").html("Questions left unanswered: " + unanswered);
      }
@@ -97,7 +103,7 @@ function stopCount() {
 
  //Start button events(shows the first question and starts the timer)
 $("#start-button").on("click", function() {
-    count = setInterval(myCountDown, 1000);
+    count = setInterval(myCountDown, 100);
     time = 30;    
     $("#start-button").hide();
     $(".hidden").show();
@@ -185,15 +191,17 @@ $(".right-answer5").on("click", function() {
     $(".QandA").hide();
     stopCount();
     winCount();
-    $(".win-loss").show();
+    $(".hidden-message-right").show();
+    setTimeout(lastQuestion, 3000)
     setTimeout(unansweredCount, 30000);
 });
 $(".wrong-answer5").on("click", function() {
     $(".QandA").hide();
-    $(".if-wrong").html("The correct answer was:" + " C. Miraak's Sword");
+    $(".if-wrong").html("The correct answer was:" + " B. 9");
     stopCount();
     lossCount();
-    $(".win-loss").show();
+    $(".hidden-message-wrong").show();
+    setTimeout(lastQuestion, 3000)
     setTimeout(unansweredCount, 30000);
 });
 //REMEMBER TO PUT THESE IN FOR THE LAST QUESTION
