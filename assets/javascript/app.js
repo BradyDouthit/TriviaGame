@@ -188,6 +188,7 @@ $(".right-answer5").on("click", function() {
     winCount();
     $(".wins").show();
     $(".losses").show();
+    $(".unanswered").show();
     setTimeout(unansweredCount, 30000);
 });
 $(".wrong-answer5").on("click", function() {
@@ -197,6 +198,7 @@ $(".wrong-answer5").on("click", function() {
     lossCount();
     $(".wins").show();
     $(".losses").show();
+    $(".unanswered").show();
     setTimeout(unansweredCount, 30000);
 });
 //REMEMBER TO PUT THESE IN FOR THE LAST QUESTION
