@@ -148,10 +148,11 @@ $("#restart").on("click", function() {
     wins = 0;
     losses = 0;
     unanswered = 0;
+    count = setInterval(myCountDown, 1000);
     $(".win-loss").hide();
-    $("#start-button").show();
     $("#restart").hide();
-    $("#countdown").hide();
+    $(".hidden").show();
+    $(".snoozed").hide();
 });
 //1st question right and wrong answer events
 $(".right-answer").on("click", function() {
