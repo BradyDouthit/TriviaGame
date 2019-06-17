@@ -45,11 +45,18 @@ h1 {
     border: none;
     margin-top: 17%;
 }
+#start-button:hover {
+    background-color: darkgray;
+}
 #restart {
     font-size: 30px;
     background-color: gray;
     border: none;
     margin-top: 17%;
+    display: none;
+}
+#restart:hover {
+    background-color: darkgray;
 }
 #countdown {
     font-size: 25px;

@@ -17,40 +17,35 @@ function myCountDown() {
         clearInterval(count)
         $(".QandA").hide();
         $(".snoozed").show();
-        $(".yeet").html(questionsAnswered)
+        unansweredCount();
     }
     if (questionsAnswered === 1 && time === 0) {
         clearInterval(count);
         setTimeout(secondQuestion, 3000)
         $(".QandA").hide();
         $(".snoozed").show();
-        unansweredCount();
     }
     if (questionsAnswered === 2 && time === 0) {
         clearInterval(count);
         setTimeout(thirdQuestion, 3000)
         $(".QandA").hide();
         $(".snoozed").show();
-        unansweredCount();
     }
     if (questionsAnswered === 3 && time === 0) {
         clearInterval(count);
         setTimeout(fourthQuestion, 3000)
         $(".QandA").hide();
         $(".snoozed").show();
-        unansweredCount();
     }
     if (questionsAnswered === 4 && time === 0) {
         clearInterval(count);
         setTimeout(fifthQuestion, 3000)
         $(".QandA").hide();
         $(".snoozed").show();
-        unansweredCount();
     }
     if (questionsAnswered === 5 && time === 0) {
         clearInterval(count);
         setTimeout(lastQuestion, 3000)
-        unansweredCount();
     }
 }
 //resets the timer and shows the respective question when called
@@ -99,7 +94,11 @@ function lastQuestion () {
     $(".hidden-message-wrong").hide();
     $(".snoozed").hide();
     $(".win-loss").show();
+    $("#restart").show();
     clearTimeout(fifthQuestion);
+    $(".losses").html("Questions answered wrong: " + losses);
+    $(".wins").html("Questions answered right: " + wins);
+    $(".unanswered").html("Questions left unanswered: " + unanswered);
 }
 
 
@@ -114,7 +113,6 @@ function stopCount() {
  function winCount() {
      if (wins < 5) {
         wins++
-        $(".wins").html("Questions answered right: " + wins);
      }
  };
 
@@ -123,18 +121,13 @@ function stopCount() {
  function lossCount() {
      if (losses < 5) {
         losses++
-        $(".losses").html("Questions answered wrong: " + losses);
      }
  };
 
 
  //adds up unanswered questions
  function unansweredCount() {
-     if (time === 0) {
-         console.log(time);
-         unanswered++
-         $(".unanswered").html("Questions left unanswered: " + unanswered);
-     }
+     unanswered++
  }
 
 
@@ -147,11 +140,19 @@ $("#start-button").on("click", function() {
     $("#start-button").hide();
     $(".hidden").show();
     $(".snoozed").hide();
-    $(".win-loss").hide();
-    unansweredCount();
 });
 
-
+$("#restart").on("click", function() {
+    questionsAnswered = 0;
+    time = 30;
+    wins = 0;
+    losses = 0;
+    unanswered = 0;
+    $(".win-loss").hide();
+    $("#start-button").show();
+    $("#restart").hide();
+    $("#countdown").hide();
+});
 //1st question right and wrong answer events
 $(".right-answer").on("click", function() {
     questionsAnswered++
@@ -185,7 +186,6 @@ $(".right-answer2").on("click", function() {
 });
 $(".wrong-answer2").on("click", function() {
     questionsAnswered++;
-
     $(".QandA").hide();
     $(".if-wrong").html("The correct answer was:" + " B. 5000");
     $(".hidden-message-wrong").show();
@@ -226,7 +226,6 @@ $(".right-answer4").on("click", function() {
 });
 $(".wrong-answer4").on("click", function() {
     questionsAnswered++;
-
     $(".QandA").hide();
     $(".if-wrong").html("The correct answer was:" + " A. Mehrune's Razor");
     $(".hidden-message-wrong").show();
@@ -244,8 +243,10 @@ $(".right-answer5").on("click", function() {
     stopCount();
     winCount();
     $(".hidden-message-right").show();
+    $(".losses").html("Questions answered wrong: " + losses);
+    $(".wins").html("Questions answered right: " + wins);
+    $(".unanswered").html("Questions left unanswered: " + unanswered);
     setTimeout(lastQuestion, 3000)
-    setTimeout(unansweredCount, 30000);
 });
 $(".wrong-answer5").on("click", function() {
     questionsAnswered++;
@@ -254,6 +255,8 @@ $(".wrong-answer5").on("click", function() {
     stopCount();
     lossCount();
     $(".hidden-message-wrong").show();
+    $(".losses").html("Questions answered wrong: " + losses);
+    $(".wins").html("Questions answered right: " + wins);
+    $(".unanswered").html("Questions left unanswered: " + unanswered);
     setTimeout(lastQuestion, 3000)
-    setTimeout(unansweredCount, 30000);
 });
