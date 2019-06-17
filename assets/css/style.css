@@ -45,6 +45,12 @@ h1 {
     border: none;
     margin-top: 17%;
 }
+#restart {
+    font-size: 30px;
+    background-color: gray;
+    border: none;
+    margin-top: 17%;
+}
 #countdown {
     font-size: 25px;
 }
