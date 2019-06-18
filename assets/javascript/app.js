@@ -12,6 +12,10 @@ function myCountDown() {
         time--
         $("#countdown").html("Time left: " + time);
     }
+    if (questionsAnswered === 0 && time === 0) {
+        $(".if-wrong").html("The correct answer was: D. 16");
+        $(".if-wrong").show();
+    }
     if (time === 0) {
         questionsAnswered++
         clearInterval(count)
@@ -30,22 +34,30 @@ function myCountDown() {
         setTimeout(thirdQuestion, 3000)
         $(".QandA").hide();
         $(".snoozed").show();
+        $(".if-wrong").html("The correct answer was: B. 5000");
+        $(".if-wrong").show();
     }
     if (questionsAnswered === 3 && time === 0) {
         clearInterval(count);
         setTimeout(fourthQuestion, 3000)
         $(".QandA").hide();
         $(".snoozed").show();
+        $(".if-wrong").html("The correct answer was: C. Miraak's Sword");
+        $(".if-wrong").show();
     }
     if (questionsAnswered === 4 && time === 0) {
         clearInterval(count);
         setTimeout(fifthQuestion, 3000)
         $(".QandA").hide();
         $(".snoozed").show();
+        $(".if-wrong").html("The correct answer was: A. Mehrune's Razor");
+        $(".if-wrong").show();
     }
     if (questionsAnswered === 5 && time === 0) {
         clearInterval(count);
         setTimeout(lastQuestion, 3000)
+        $(".if-wrong").html("The correct answer was: B. 9");
+        $(".if-wrong").show();
     }
 }
 //resets the timer and shows the respective question when called
@@ -99,6 +111,7 @@ function lastQuestion () {
     $(".losses").html("Questions answered wrong: " + losses);
     $(".wins").html("Questions answered right: " + wins);
     $(".unanswered").html("Questions left unanswered: " + unanswered);
+    $(".if-wrong").hide();
 }
 
 

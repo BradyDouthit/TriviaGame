@@ -181,7 +181,6 @@ h1 {
 }
 .if-wrong {
     font-size: 50px;
-    margin-top: -1%;
     margin-bottom: 1%;
     display: none;
 }
